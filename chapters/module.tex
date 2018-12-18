@@ -1,0 +1,14 @@
+\chapter{Module}
+
+\begin{example}[Import declarations]
+  \begin{lstlisting}[language=intentio]
+  import io
+  import math:sin
+  import math as m
+  
+  fun main() {
+    f = io:open("result.txt", "w");
+    io:writeln(f, sin(m:pi));
+  }
+\end{lstlisting}
+\end{example}

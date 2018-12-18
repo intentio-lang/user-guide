@@ -1,0 +1,26 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.blg": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.synctex.gz": true,
+    "**/*.toc": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+  },
+  "spellright.language": "English (British)",
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "haskell"
+  ]
+}

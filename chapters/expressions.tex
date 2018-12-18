@@ -1,0 +1,48 @@
+\chapter{Expressions}
+
+\begin{example}[Types of expression]
+\begin{lstlisting}[language=intentio]
+  # id
+  a;
+  foo;
+
+  # literal
+  "foo"
+  12_345_678
+
+  # block
+  { a = 123; b == a}
+
+  # operator
+  5 + b;
+  9 >= a;
+
+  # call
+  add(3, 4);
+  foo();
+
+  # loop
+  while(i < 4){
+    println(i); 
+    i = i + 1;
+  }
+
+  # conditional
+  if (a = 3; c = b; a < b) {
+    c = a;
+  } else {
+    println("c is equal to b which value is " + str(b));
+  };
+
+  # return
+  return a;
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Combine them]
+\begin{lstlisting}[language=intentio]
+  a and {3 > 5; 6 < 7} or "true" and not false()
+  b = if(a){ while(a){a = not a;};}
+\end{lstlisting}
+\end{example}
+

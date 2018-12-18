@@ -1,0 +1,43 @@
+\chapter{Control structures}
+
+\begin{example}[While loop]
+\begin{lstlisting}[language=intentio]
+  i = 0;
+  while(i < 10){
+    println(i);
+    i = i + 1;
+  }
+\end{lstlisting}
+\end{example}
+
+\begin{example}[While infinity loop]
+\begin{lstlisting}[language=intentio]
+  while(){
+    # some code
+  }
+
+  # is the same as
+
+  while(succ none){
+    # some code
+  }
+\end{lstlisting}
+\end{example}
+
+\begin{example}[If-condition]
+\begin{lstlisting}[language=intentio,mathescape=true]
+    if(condition) {
+      # this code will be evaluated, if condition evaluate with succes
+    }
+\end{lstlisting}
+\end{example}
+
+\begin{example}[If-else-condition]
+\begin{lstlisting}[language=intentio,mathescape=true]
+  if(condition) {
+    # this code will be evaluated, if condition evaluate with succes
+  } else {
+    # this code will be evaluated, if condition evaluate with fail
+  }
+\end{lstlisting}
+\end{example}

@@ -1,0 +1,19 @@
+\chapter{Result}
+
+\begin{lstlisting}[language=haskell]
+  data Value = ...
+  data Type = ...
+
+  newtype Term = (Value, Type)
+
+  data Result = Succ Term
+              | Fail Term
+\end{lstlisting}
+
+\begin{example}[Some results]
+\begin{lstlisting}
+  succ "foo"  # succ String foo
+  succ 1.25   # succ Float 1.25
+  fail none   # fail None none
+\end{lstlisting}
+\end{example}

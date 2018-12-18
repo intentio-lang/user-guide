@@ -1,0 +1,30 @@
+\chapter{Functions}
+
+\begin{example}[Calling a function]
+\begin{lstlisting}[language=intentio]
+  fun main() {
+    a = int(scanln());
+    # function id + list of args in parens
+    println(a);
+  }
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Defining a function]
+\begin{lstlisting}[language=intentio]
+  # keyword fun + name + list of arguments in parens + body in brakets
+  fun Identity(s) {
+    s == "a" or s == "b" or s == "c"
+  }
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Calling arbitrary functions]
+\begin{lstlisting}[language=intentio,mathescape=true]
+  fun f(x) { x * 2; }
+  fun g() { f; }
+
+  y = g()(5); # works same as y = f(5)
+  y == 10;
+\end{lstlisting}
+\end{example}

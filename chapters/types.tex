@@ -1,0 +1,65 @@
+\chapter{Types}
+
+\begin{example}[None]
+\begin{lstlisting}[language=intentio]
+  a = succ none
+  b = fail none
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Integer]
+\begin{lstlisting}[language=intentio]
+  0
+  1
+  10
+  10_0
+  10_
+  10___
+  0b111000
+  0B111000
+  0b111_000
+  0b111_000_
+  0o01234567
+  0O01234567
+  0o0123_4567__
+  0x0123456789abcdefABCDEF
+  0X0123456789abcdefABCDEF
+  0x0123456789_abcdef_ABCDEF_
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Float]
+\begin{lstlisting}[language=intentio]
+  1.0
+  1.0e92
+  10e_6
+  1_________.0_______
+  1_.0
+  10_e5
+  35e+5
+  7e-5
+  8E5
+\end{lstlisting}
+\end{example}
+
+\begin{example}[String]
+\begin{lstlisting}[language=intentio,mathescape=true]
+  "Quick brown fox jumps over the lazy dog"
+
+  "Quick brown fox
+  jumps over
+  the lazy dog"
+
+  "C:\\"
+
+  "\""
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Raw String]
+\begin{lstlisting}[language=intentio]
+  "foo"      == r"foo"            # output: foo
+  "\"foo\""  == r#""foo""#        # output: "foo"
+  "x #\"# y" == r##"x #"# y"##    # output: x #"# y
+\end{lstlisting}
+\end{example}

@@ -1,0 +1,43 @@
+\ProvidesPackage{intentio-macros}[2018/05/18 v1.0 Intentio Reference Macros]
+
+\RequirePackage{amsmath}
+\RequirePackage{mathtools}
+
+\newenvironment{bnfutils}
+{
+  \newcommand{\gd}[1]{\hypertarget{##1}{##1}}
+  \newcommand{\gp}[1]{\hyperlink{##1}{##1}}
+  \newcommand{\eq}{& \rightarrow &}
+  \newcommand{\gor}{\hskip0.5em\relax | \hskip0.5em\relax}
+  \newcommand{\gorln}{\\ & \gor &}
+  \newcommand{\term}[1]{\colorbox{gray!10}{\texttt{##1}}}
+  \newcommand{\gdiff}[2]{{##1}_{\backslash ##2}}
+  \newcommand{\gtry}[1]{[ ##1 ]}
+  \newcommand{\gmany}[1]{{( ##1 )}^{*}}
+  \newcommand{\gmanya}[1]{{( ##1 )}^{+}}
+  \newcommand{\gcomm}[1]{&& \text{(##1)}}
+}
+{}
+
+\newenvironment{bnf}
+{
+  \begin{bnfutils}
+  \begin{equation*}
+  \begin{matrix*}[l]
+}
+{
+  \end{matrix*}
+  \end{equation*}
+  \end{bnfutils}
+}
+
+\newcounter{example}[section]
+\newenvironment{example}[1][\unskip]
+{
+  \refstepcounter{example}
+  \medskip
+  \textbf{Example~\thesection.\theexample:} #1
+}
+{
+  \medskip
+}

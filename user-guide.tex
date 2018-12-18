@@ -1,0 +1,100 @@
+% !TeX root = ./user-guide.tex
+
+\documentclass[12pt,a4paper,oneside,fleqn]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{makeidx}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{intentio-macros}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\hypersetup{
+  bookmarksopen=true,
+  citecolor=blue,
+  colorlinks=true,
+  linkcolor=blue,
+  pdfauthor={Anna Bukowska, Marek Kaput},
+  pdfpagemode=UseOutlines,
+  pdftitle={Język programowania inspirowany językiem Icon wraz z kompilatorem},
+  urlcolor=blue,
+}
+
+\lstdefinestyle{stdstyle}{
+  backgroundcolor=\color{white},
+  basicstyle=\footnotesize\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=t,
+  commentstyle=\color{Sepia},
+  frame=single,
+  framexleftmargin=3.5em,
+  keepspaces=true,
+  keywordstyle=\color{Blue}\bfseries,
+  numbers=left,
+  numberstyle=\footnotesize,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stringstyle=\color{OliveGreen},
+  tabsize=2,
+  xleftmargin=4em,
+}
+\lstset{style=stdstyle}
+
+\lstdefinelanguage{intentio}{
+    morekeywords=[1]{and, break, const, do, else, enum, eval, export, extern, fail, fun, if, impl, import, in, is, module, none, not, or, return, struct, succ, trait, type, while, xor, yield, \_},
+    sensitive=true,
+    morecomment=[l]{\#}, % l is for line comment
+    morestring=[b]" % defines that strings are enclosed in double quotes
+}
+
+\makeindex
+
+\author{Anna Bukowska, Marek Kaput}
+
+\title{User Guide}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+
+\include{chapters/preface}
+
+\mainmatter
+
+\part{Introduction}
+\include{chapters/hello-world}
+\include{chapters/result}
+\include{chapters/goal-evaluation}
+\include{chapters/control-structures}
+\include{chapters/math-operations}
+\include{chapters/functions}
+\include{chapters/types}
+\include{chapters/operations-on-strings}
+\include{chapters/expressions}
+\include{chapters/assignments}
+\include{chapters/module}
+
+\backmatter
+
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\end{document}

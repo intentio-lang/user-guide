@@ -1,0 +1,30 @@
+\chapter{Operations on string}
+
+\begin{example}[Trim and unindent]
+\begin{lstlisting}[language=intentio]
+  t"   trim   " == "trim"
+
+  u"  un
+    in
+    dent"
+  ==
+  "un
+  in
+  dent"
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Functions frrom std library]
+\begin{lstlisting}[language=intentio]
+  find("oo", "fooooo")  # succ 1
+  find("ofo", "fooooo") # fail none
+  last("foo")           # succ "o"
+  tail("foo")           # succ "oo"
+  head("foo")           # succ "f"
+  single("foo")         # fail 3
+  empty("")             # succ 0
+  cut(1, 3, "fooooo")   # succ "00"
+  len("foo")            # succ 3
+\end{lstlisting}
+\end{example}
+

@@ -1,0 +1,42 @@
+\chapter{Math operations}
+
+\begin{example}[Math operators]
+\begin{lstlisting}[language=intentio]
+  1 + 2       # succ 3
+  1 - 2       # succ -1
+  1 * 2       # succ 2
+  1 / 2       # succ 0
+  1 / 2.0     # succ 0.5
+  1 / (2 - 3) # succ -1
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Relational operators]
+\begin{lstlisting}[language=intentio]
+  1 < 2       # succ 2
+  1 > 2       # fail 2
+  1 <= 2      # succ 2
+  1 >= 2      # fail 2
+  1 == 2      # fail 2
+  1 == 1.0    # succ 1.0 - authomatic conversion from Int to Float
+  1 =! 2      # succ 2
+  1 === 1     # succ 1
+  1 === 1.0   # fail 1.0
+  1 ==! 1     # fail 1
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Logical operators]
+\begin{lstlisting}[language=intentio]
+  a = succ "Ala"   
+  b = fail 8
+
+  a or b            # succ 8
+  a or succ none    # succ none
+  a and b           # fail 8
+  succ none and a   # succ "Ala"
+  a xor b           # succ 8
+  a xor fail none   # succ none
+  not a             # fail "Ala"
+\end{lstlisting}
+\end{example}

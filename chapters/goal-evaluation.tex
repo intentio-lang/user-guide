@@ -1,0 +1,22 @@
+\chapter{Goal evaluation}
+
+\begin{example}[Comparation]
+\begin{lstlisting}[language=intentio]
+  2 < 3   # succ 3
+  3 < 2   # fail 2
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Simple usage of goal evaluation]
+\begin{lstlisting}[language=intentio,mathescape=true]
+  if (2 < 3) {
+    # this code will be evaluated
+  }
+
+  if (3 < 2) {
+    # this code won't be evaluated
+  }
+\end{lstlisting}
+\end{example}
+
+Type and value are not important, it is succ/fail which decide about the control flow.
