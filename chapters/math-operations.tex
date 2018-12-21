@@ -1,16 +1,29 @@
-\chapter{Math operations}
+\chapter{Operations}
 
-\begin{example}[Math operators]
+Intentio provides three types of oparators:
+\begin{itemize}
+  \item simple math operators
+  \item relational operators
+  \item logical operators
+\end{itemize}
+
+\begin{example}[Simple math operators]
 \begin{lstlisting}[language=intentio]
   1 + 2       # succ 3
   1 - 2       # succ -1
   1 * 2       # succ 2
   1 / 2       # succ 0
   1 / 2.0     # succ 0.5
-  1 / (2 - 3) # succ -1
 \end{lstlisting}
 \end{example}
 
+\begin{example}[Usage of math operators]
+\begin{lstlisting}[language=intentio]
+  (2 + 7) * 3 - 8 / 4 # succ 25
+\end{lstlisting}
+\end{example}
+
+\clearpage
 \begin{example}[Relational operators]
 \begin{lstlisting}[language=intentio]
   1 < 2       # succ 2
@@ -18,11 +31,20 @@
   1 <= 2      # succ 2
   1 >= 2      # fail 2
   1 == 2      # fail 2
-  1 == 1.0    # succ 1.0 - authomatic conversion from Int to Float
+  # (below) authomatic conversion from Int to Float
+  1 == 1.0    # succ 1.0
   1 =! 2      # succ 2
   1 === 1     # succ 1
   1 === 1.0   # fail 1.0
   1 ==! 1     # fail 1
+\end{lstlisting}
+\end{example}
+
+\begin{example}[Usage of relational operators]
+\begin{lstlisting}[language=intentio]
+  a = 3;
+  b = 7;
+  1 < a < b < 20 # succ 20
 \end{lstlisting}
 \end{example}
 

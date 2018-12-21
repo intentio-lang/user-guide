@@ -1,25 +1,29 @@
 \chapter{Functions}
 
+To call a function it is needed to use sequence: \\
+function id + list of arguments in parens (separated by comas).
+
 \begin{example}[Calling a function]
 \begin{lstlisting}[language=intentio]
   fun main() {
     a = int(scanln());
-    # function id + list of args in parens
     println(a);
   }
 \end{lstlisting}
 \end{example}
 
+To define a function it is needed to use sequence: \\
+keyword fun + name + list of arguments in parens (separated by comas) + body in brakets.
+
 \begin{example}[Defining a function]
 \begin{lstlisting}[language=intentio]
-  # keyword fun + name + list of arguments in parens + body in brakets
   fun Identity(s) {
     s == "a" or s == "b" or s == "c"
   }
 \end{lstlisting}
 \end{example}
 
-\begin{example}[Calling arbitrary functions]
+\begin{example}[Some syntactic sugar]
 \begin{lstlisting}[language=intentio,mathescape=true]
   fun f(x) { x * 2; }
   fun g() { f; }

@@ -1,7 +1,32 @@
 \chapter{Module}
 
+Intentio provides five types of import:
+\begin{itemize}
+  \item qualified import
+\begin{lstlisting}[language=intentio]
+  import a
+\end{lstlisting}
+  \item renamed qualified import
+\begin{lstlisting}[language=intentio]
+  import a as b
+\end{lstlisting}
+  \item item import
+\begin{lstlisting}[language=intentio]
+  import a:x
+\end{lstlisting}
+  \item renamed item import
+\begin{lstlisting}[language=intentio]
+  import a:x as b
+\end{lstlisting}
+  \item import all
+\begin{lstlisting}[language=intentio]
+  import a:*
+\end{lstlisting}
+\end{itemize}
+
+\clearpage
 \begin{example}[Import declarations]
-  \begin{lstlisting}[language=intentio]
+\begin{lstlisting}[language=intentio]
   import io
   import math:sin
   import math as m
@@ -12,3 +37,16 @@
   }
 \end{lstlisting}
 \end{example}
+
+\begin{example}[Re-exporting]
+  \begin{lstlisting}[language=intentio]
+  # File: myprelude.ieo
+  
+  export (open, writeln, sin, pi)
+  
+  import io:open
+  import io:writeln
+  import math:sin
+  import math:pi
+  \end{lstlisting}
+  \end{example}

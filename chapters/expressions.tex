@@ -1,45 +1,54 @@
 \chapter{Expressions}
 
-\begin{example}[Types of expression]
+Intentio provides eight types of expressions:
+\begin{itemize}
+  \item id
 \begin{lstlisting}[language=intentio]
-  # id
   a;
   foo;
-
-  # literal
+\end{lstlisting}
+  \item literal
+\begin{lstlisting}[language=intentio]
   "foo"
   12_345_678
-
-  # block
+\end{lstlisting}
+  \item block
+\begin{lstlisting}[language=intentio]
   { a = 123; b == a}
-
-  # operator
+\end{lstlisting}
+  \item operator
+\begin{lstlisting}[language=intentio]
   5 + b;
   9 >= a;
-
-  # call
+\end{lstlisting}
+  \item call
+\begin{lstlisting}[language=intentio]
   add(3, 4);
   foo();
-
-  # loop
+\end{lstlisting}
+\clearpage
+\item loop
+\begin{lstlisting}[language=intentio]
   while(i < 4){
     println(i); 
     i = i + 1;
   }
-
-  # conditional
+\end{lstlisting}
+  \item conditional
+\begin{lstlisting}[language=intentio]
   if (a = 3; c = b; a < b) {
     c = a;
   } else {
     println("c is equal to b which value is " + str(b));
   };
-
-  # return
+\end{lstlisting}
+  \item return
+\begin{lstlisting}[language=intentio]
   return a;
 \end{lstlisting}
-\end{example}
+\end{itemize}
 
-\begin{example}[Combine them]
+\begin{example}[Combined]
 \begin{lstlisting}[language=intentio]
   a and {3 > 5; 6 < 7} or "true" and not false()
   b = if(a){ while(a){a = not a;};}

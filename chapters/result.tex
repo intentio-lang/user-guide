@@ -1,14 +1,19 @@
 \chapter{Result}
 
+Programs consist of assignments and expressions. Each evaluated expression returns a \emph{result}.
+
+The idea of result:
 \begin{lstlisting}[language=haskell]
   data Value = ...
-  data Type = ...
+  data Type = None | Int | Float | String | Regex
 
   newtype Term = (Value, Type)
 
   data Result = Succ Term
               | Fail Term
 \end{lstlisting}
+
+The difference between \emph{result} in Intentio and most of other languages is containing a \emph{succ/fail} prefix.
 
 \begin{example}[Some results]
 \begin{lstlisting}

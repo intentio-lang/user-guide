@@ -1,5 +1,11 @@
 \chapter{Control structures}
 
+Intentio provides two control structures:
+\begin{itemize}
+  \item \emph{while} loop
+  \item \emph{if} condition (whith optional \emph{else} part)
+\end{itemize}
+
 \begin{example}[While loop]
 \begin{lstlisting}[language=intentio]
   i = 0;
@@ -10,34 +16,38 @@
 \end{lstlisting}
 \end{example}
 
-\begin{example}[While infinity loop]
+\begin{example}[Infinity while loop]
 \begin{lstlisting}[language=intentio]
   while(){
-    # some code
+    println("infinity");
   }
 
   # is the same as
 
   while(succ none){
-    # some code
+    println("infinity");
   }
 \end{lstlisting}
 \end{example}
 
-\begin{example}[If-condition]
+\clearpage
+\begin{example}[If condition]
 \begin{lstlisting}[language=intentio,mathescape=true]
     if(condition) {
-      # this code will be evaluated, if condition evaluate with succes
+      # this code will be evaluated
+      # if condition evaluate with succes
     }
 \end{lstlisting}
 \end{example}
 
-\begin{example}[If-else-condition]
+\begin{example}[If-else condition]
 \begin{lstlisting}[language=intentio,mathescape=true]
   if(condition) {
-    # this code will be evaluated, if condition evaluate with succes
+    # this code will be evaluated
+    # if condition evaluate with succes
   } else {
-    # this code will be evaluated, if condition evaluate with fail
+    # this code will be evaluated
+    # if condition evaluate with fail
   }
 \end{lstlisting}
 \end{example}

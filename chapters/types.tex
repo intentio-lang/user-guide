@@ -1,5 +1,14 @@
 \chapter{Types}
 
+Intentio provides five types:
+\begin{itemize}
+  \item None
+  \item Integer
+  \item Float
+  \item String
+  \item Regex
+\end{itemize}
+
 \begin{example}[None]
 \begin{lstlisting}[language=intentio]
   a = succ none
@@ -63,3 +72,10 @@
   "x #\"# y" == r##"x #"# y"##    # output: x #"# y
 \end{lstlisting}
 \end{example}
+
+\begin{example}[Regex]
+  \begin{lstlisting}[language=intentio]
+    # dependent on implementation 
+    "[abc]"      == "a" or "b"  or "c"
+  \end{lstlisting}
+  \end{example}

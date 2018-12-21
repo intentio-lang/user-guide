@@ -1,11 +1,16 @@
 \chapter{Goal evaluation}
 
-\begin{example}[Comparation]
+The building of \emph{result} allows for using \emph{goal evaluation}.
+
+\begin{example}[Some expressions results]
 \begin{lstlisting}[language=intentio]
-  2 < 3   # succ 3
-  3 < 2   # fail 2
+  2 < 3                 # succ 3
+  3 < 2                 # fail 2
+  find("a", foo_string) # succ _nr_ | fail none
 \end{lstlisting}
 \end{example}
+
+The main idea of \emph{goal evaluation} is to use \emph{succ/fail} to control flow in program.
 
 \begin{example}[Simple usage of goal evaluation]
 \begin{lstlisting}[language=intentio,mathescape=true]
@@ -16,7 +21,30 @@
   if (3 < 2) {
     # this code won't be evaluated
   }
+
+  while(find("a", foo_string)){
+    pos = find("a", foo_string;
+    a = cut(0,pos, foo_string);
+    # this code will be evaluated 
+    # as long as foo_string contains an "a"
+  }
 \end{lstlisting}
 \end{example}
 
-Type and value are not important, it is succ/fail which decide about the control flow.
+\clearpage
+The type and the value are not important. It allows to use complicated conditions, combined with basic expresssions.
+
+\begin{example}[The combined condition]
+\begin{lstlisting}[language=intentio,mathescape=true]
+  if (
+        -30 < a < 30
+        and if(a < 0){
+            is_prime_num(- a)
+          }else{
+            is_prime_num(a)
+          }
+      ) {
+    println(a);
+  }
+\end{lstlisting}
+\end{example}
